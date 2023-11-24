@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Tanz am Irchel | 2024</title>
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Boostrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://use.typekit.net/smv8hzq.css" rel="stylesheet">
+
+    <!-- Google Maps -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+
+<video autoplay id="blur" loop muted playsinline poster="img/promoclip_final_no_header.png">
+    <source src="img/promoclip_final_no_header.mp4" type="video/mp4">
+</video>
+
+<button id="toggleButton"><i class="fas fa-volume-mute" id="icon-sound"></i></button>
+
+<!-- Overlay -->
+<h3 class="label-overlay" id="label-info"><a href="#section-info">info</a></h3>
+<h3 class="label-overlay" id="label-location"><a href="#section-location">location</a></h3>
+<h3 class="label-overlay" id="label-lineup"><a href="#section-lineup">line up</a></h3>
+<h3 class="label-overlay" id="label-sponsor"><a href="#section-sponsor">sponsors</a></h3>
+<!-- Overlay -->
+
+<!--Main layout-->
+<main id="main">
+    <div class="container">
+        <!-- Section: Logo -->
+        <section id="section-home">
+            <img alt="logo" id="logo" src="img/logo-gold.png">
+        </section>
+        <!-- Section: Logo -->
+
+        <!--Section: Info-->
+        <section class="wow fadeIn text-center" id="section-info">
+            <h2>info</h2>
+            <p>Tanz am Irchel brings the finest electrical tunes to Campus Irchel. Come, dance with us into the night!
+                Need to recharge your batteries? We've got you covered - cold drinks, tasty food, fun activities and a
+                chill-out area await you.</p>
+        </section>
+        <!--Section: Info -->
+
+        <!--Section: Line Up -->
+        <section class="text-center" id="section-lineup">
+            <h2>line up</h2>
+            <div>
+                <img class="img-lineup" src="img/DJS-1.webp">
+                <img class="img-lineup" src="img/DJS-2.webp">
+                <img class="img-lineup" src="img/DJS-3.webp">
+                <img class="img-lineup" src="img/DJS-4.webp">
+            </div>
+        </section>
+        <!--Section: Line Up -->
+
+        <!--Section: Location-->
+        <section class="text-center" id="section-location">
+            <h2>location</h2>
+            <div id="map"></div>
+        </section>
+        <!--Section: Location -->
+
+        <!--Section: Sponsoring -->
+        <section class="text-center" id="section-sponsor">
+            <h2>Sponsors</h2>
+            <div>
+                <img class="img-sponsor" src="img/VSUZH%20Logo%20Blau.png">
+            </div>
+
+        </section>
+        <!--Section: Sponsoring -->
+
+    </div>
+</main>
+<!-- Main layout -->
+
+<!-- Footer -->
+<footer class="page-footer text-center mt-4">
+
+    <!-- Copyright -->
+    <div class="py-4">
+        <p>
+            <a class="social-icon" href="mailto:info@tanzamirchel.ch"><i class="fa-regular fa-envelope"></i></a>
+            <a class="social-icon" href="https://www.facebook.com/tanzamirchel/"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icon" href="https://www.instagram.com/tanzamirchel/"><i class="fab fa-instagram"></i></a>
+        </p>
+        <p>&nbsp;&nbsp;&nbsp;© 2023 by Verein TAI</p>
+        <p>&nbsp;&nbsp;&nbsp;<a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<!-- SCRIPTS -->
+
+<!-- JQuery -->
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<!-- Bootstrap tooltips -->
+<script src="js/popper.min.js" type="text/javascript"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<!-- MDB core JavaScript -->
+<script src="js/mdb.min.js" type="text/javascript"></script>
+<!-- Rellax -->
+<script src="js/rellax.min.js" type="text/javascript"></script>
+<script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax', {});
+</script>
+
+<!-- Custom JavaScript -->
+<script src="js/javascript.js" type="text/javascript"></script>
+<!-- Font Awesome -->
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/c49be97ab3.js"></script>
+<!-- Initializations -->
+<script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+    $(function () {
+        $('a[href*=\\#]:not([href=\\#])').on('click', function () {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=]' + this.hash.substr(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        });
+    });
+
+    $('.button-x').hover(
+        function () {
+            $(this).parent().toggleClass('expand');
+        },
+        function () {
+            $(this).parent().toggleClass('expand');
+        }
+    );
+
+</script>
+</body>
+
+</html>

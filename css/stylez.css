@@ -1,0 +1,75 @@
+.sub {
+    margin: 0;
+}
+
+.button-x {
+    cursor: pointer;
+    width: 300px;
+    height: 60px;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button-x:hover {
+    letter-spacing: 1px;
+    color: #DE4F55;
+}
+
+.container-x {
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+    top: 5vh;
+    background-color: #FFF5EE;
+    width: 300px;
+    max-width: 300px;
+    height: 60px;
+    text-align: center;
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);*/
+    overflow: hidden;
+    transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
+}
+
+.container-x.expand {
+    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);*/
+    border-radius: 0;
+    width: 80%;
+    height: 500px;
+    max-width: 600px;
+    padding: 0;
+    transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
+}
+
+.content-x {
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: left;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s;
+}
+
+.expand .content-x {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s;
+}
+
+.content-x .head-x {
+    padding: 0 0 20px 0;
+}
+
+.content-x .body-x {
+    color: #000;
+    color: rgba(0, 0, 0, 0.87);
+    background-image: url("../img/bands/The_Rising_Lights.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+ 
