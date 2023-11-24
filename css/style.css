@@ -179,6 +179,10 @@ video {
   filter: drop-shadow(-8px 8px 0px rgb(60, 81, 87));
 }
 
+#lineup-container {
+  min-height: 150vh;
+}
+
 /* Location */
 #map {
   height: 500px;
@@ -187,7 +191,7 @@ video {
 
 /* Sponsor */
 .img-sponsor {
-  width: 30%;
+  width: 20%;
   height: auto;
   padding: 10px;
   margin: 0;
